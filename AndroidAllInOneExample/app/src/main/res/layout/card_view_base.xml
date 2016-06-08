@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:padding="8dp"
+    >
+<android.support.v7.widget.CardView
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:background="@drawable/card_view_base_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:background="@drawable/circular_background"
+            android:src="@drawable/home_giraffe_icon"
+            android:id="@+id/card_image_view"
+            android:layout_width="150dp"
+            android:layout_height="150dp" />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:text="Amitabh"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="30dp"
+            android:layout_toRightOf="@+id/card_image_view"
+            android:id="@+id/card_view_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
+
+</LinearLayout>
