@@ -3,6 +3,8 @@
     package="vp.androidallinoneexample">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
 
     <application
@@ -12,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".androidversionpicasocardview.AndroidVersionDemo"
+            android:name=".CheckNetPermission"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -21,6 +23,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".notificationexample.NotificationView"
+            android:label="Details of notification"
+            android:parentActivityName=".notificationexample.NotificationActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".notificationexample.NotificationActivity"/>
+
+        </activity>
+        <receiver
+            android:enabled="true"
+            android:exported="true"
+            android:name=".broadcastrecieverexample.MyReciever">
+            <intent-filter>
+                <action android:name="vp.androidallinoneexample.BroadcastReciever"></action>
+            </intent-filter>
+
+        </receiver>
     </application>
 
 </manifest>
