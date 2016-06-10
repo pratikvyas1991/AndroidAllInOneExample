@@ -26,8 +26,11 @@ public class CheckNetPermission extends Activity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String networkType="Not selected !!!" ;
                 Boolean checkIT = isOnline();
-                String networkType = typeOfNetwork();
+                 if(typeOfNetwork()!=null){
+                     networkType = typeOfNetwork();
+                 }
                 if(checkIT){
                     Toast.makeText(getApplicationContext(),"Net is working ",Toast.LENGTH_LONG).show();
                 }else{
